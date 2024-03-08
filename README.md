@@ -12,15 +12,15 @@ Organizations need a simple method to identify risks across their software suppl
 
 VBP is highly flexible and can be applied to various targets: Applications, open-source projects, individual developers, DevOps teams, entire companies, and more. However, it really excels when used for threat modelling a specific software supply chain.  Let's explore how the VBP framework operates.
 
-
 ## Value
 
-**Definition:** What benefit would the target provide to an attacker?
+### Definition: 
 
-<aside>
-💡 Identifying the potential value a target can offer an attacker is the first step in assessing risk. This target could be an individual developer, an application, or something else. For instance, a developer might be valuable because they have access to the intellectual property that is crucial for a significant project. Alternatively, an application might be valuable if it's used by government departments. The goal is to ascertain the value each target could bring to an attacker.
+What benefit would the target provide to an attacker?
 
-</aside>
+### Description:
+
+Identifying the potential value a target can offer an attacker is the first step in assessing risk. This target could be an individual developer, an application, or something else. For instance, a developer might be valuable because they have access to the intellectual property that is crucial for a significant project. Alternatively, an application might be valuable if it's used by government departments. The goal is to ascertain the value each target could bring to an attacker.
 
 Here are some questions to consider when assessing the value of potential targets:
 
@@ -38,12 +38,13 @@ Here are some questions to consider when assessing the value of potential target
 
 ## Behaviours
 
-**Definition:** Traits of an individual human that makes that makes that person less secure
+### Definition:
 
-<aside>
-💡 Behaviours are the ongoing choices that an individual makes in their working life. These behaviours affect how they interact with work processes, and influences the tools and configurations they use. Behaviours can be thought of as the fingerprints that a person leaves as they do their job. Behaviours are the patterns of the individual that allow you to fingerprint them.
+Traits of an individual human that makes that makes that person less secure
 
-</aside>
+### Description:
+
+Behaviours are the ongoing choices that an individual makes in their working life. These behaviours affect how they interact with work processes, and influences the tools and configurations they use. Behaviours can be thought of as the fingerprints that a person leaves as they do their job. Behaviours are the patterns of the individual that allow you to fingerprint them.
 
 When identifying the behaviours of a person you are contemplating targeting here are some questions you can ask:
 
@@ -55,12 +56,13 @@ When identifying the behaviours of a person you are contemplating targeting here
 
 ## Patterns
 
-**Definition:** Repeated traits within an organization that compromise its security.
+### Definition:
 
-<aside>
-💡 Patterns are common traits observable across various application environments. Initially, they emerge as individual behaviours which, over time, solidify into recurring patterns exhibited by teams, departments, and even entire companies. These patterns deviate from industry best practices, and can be considered as "anti-patterns". The name isn't crucial. What matters is our ability to recognize these patterns and leverage them during threat modelling and offensive operations.
+Repeated traits within an organization that compromise its security.
 
-</aside>
+### Description: 
+
+Patterns are common traits observable across various application environments. Initially, they emerge as individual behaviours which, over time, solidify into recurring patterns exhibited by teams, departments, and even entire companies. These patterns deviate from industry best practices, and can be considered as "anti-patterns". The name isn't crucial. What matters is our ability to recognize these patterns and leverage them during threat modelling and offensive operations.
 
 When identifying the patterns of a potential target group, consider the following questions:
 
