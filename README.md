@@ -10,7 +10,7 @@ I developed the VBP framework as a practical threat modeling framework for softw
 
 Now, let's explore how the VBP framework operates.
 
-### Value
+## Value
 
 **Definition:** What benefit would the target provide to an attacker?
 
@@ -30,7 +30,7 @@ Here are some questions to consider when assessing the value of potential target
 
 **Company:** Who are the target customers? Are the company's customers government departments or other organizations that are common targets for attack?
 
-### Behaviours
+## Behaviours
 
 **Definition:** Traits of an individual human that makes that makes that person less secure
 
@@ -44,7 +44,7 @@ When identifying the behaviours of a person you are contemplating targeting here
 
 **Variables:** How does the person like to name things? Where do they like to store secrets? Do they use .env files or secret managers?
 
-### Patterns
+## Patterns
 
 **Definition:** Repeated traits within an organization that compromise its security.
 
