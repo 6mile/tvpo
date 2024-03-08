@@ -1,14 +1,6 @@
-# VBP Framework
+#VBP - Value, Behaviors & Patterns
 
-If the bad guys were to target software development teams, how would they do it? How do I decide to target? Who is a high value target? Well, i’ve created a mechanism I call VBP for “Value, Behaviour and Patterns”. This framework helps me provide risk assessments for engineering orgs.
-
-My presso for CrikeyCon:
-
-[https://docs.google.com/presentation/d/1mXhj-GT_A9hVy_QKtWJPg-UCcvApZW5y_gBpoyOYpG4/edit#slide=id.gc39213de60_0_1530](https://docs.google.com/presentation/d/1mXhj-GT_A9hVy_QKtWJPg-UCcvApZW5y_gBpoyOYpG4/edit#slide=id.gc39213de60_0_1530)
-
-**VBP - Value, Behaviors & Patterns**
-
-**A Flexible Threat Modelling Framework For The Software Supply Chain**
+##A Flexible Threat Modelling Framework For The Software Supply Chain
 
 The reality is that modern applications are complex and dynamic, making them challenging to secure. They utilize browser-based programming languages, directly interact with online dependencies, and implement technologies like containers, serverless, and public cloud. Understanding these components, such as the public cloud components used, the identity provider in use, and the required infrastructure, is crucial for securing the application.
 
