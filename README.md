@@ -1,6 +1,8 @@
-# VBP: Value, Behaviours & Patterns
+# VBP Framework
 
-![VBP-logo.png](images/VBP_Banner_word_logo.png)
+## Flexible threat modelling & assessment methodology for software supply chains
+
+![VBP-logo.png](images/VBP-banner.png)
 
 The reality is that modern applications are complex and dynamic, making them challenging to secure. They utilize browser-based programming languages, directly interact with online dependencies, and implement technologies like containers, serverless, and public cloud. Understanding these components, such as the public cloud components used, the identity provider in use, and the required infrastructure, is crucial for securing the application.
 
@@ -8,9 +10,14 @@ The supply chains supporting these applications are equally complex. They encomp
 
 ![github-visualizing-software-supply-chain.png](images/github-visualizing-software-supply-chain.png)
 
-Organizations need a simple method to identify risks across their software supply chains to prioritize necessary work.  I developed the VBP framework as a practical threat modelling framework for software supply chains.
+Organizations need a simple method to identify risks across their software supply chains to prioritize necessary work.  I developed the VBP framework as a practical threat modelling and assessment methodology for software supply chains.
 
-VBP is highly flexible and can be applied to various targets: Applications, open-source projects, individual developers, DevOps teams, entire companies, and more. However, it really excels when used for threat modelling a specific software supply chain.  Let's explore how the VBP framework operates.
+VBP is highly flexible and can be applied to various targets: Applications, open-source projects, individual developers, DevOps teams, entire companies, and more. However, it really excels when applied to software supply chains.  Let's explore how the VBP framework operates.
+
+Feel free to use these shortcuts:
+
+| [Value](#value) | [Behaviours](#behaviours) | [Patterns](#patterns) | [Playbooks](PLAYBOOKS.md) |
+
 
 ## Value
 
@@ -36,6 +43,7 @@ Here are some questions to consider when assessing the value of potential target
 
 **Company:** Who are the target customers? Are the company's customers government departments or other organizations that are common targets for attack?
 
+
 ## Behaviours
 
 ### Definition:
@@ -54,6 +62,7 @@ When identifying the behaviours of a person you are contemplating targeting here
 
 **Variables:** How does the person like to name things? Where do they like to store secrets? Do they use .env files or secret managers?
 
+
 ## Patterns
 
 ### Definition:
@@ -71,6 +80,19 @@ When identifying the patterns of a potential target group, consider the followin
 **Source Code Management (SCM):** Does the organization use GitHub for all repositories, or GitHub for public and GitLab for private ones? Are teams using Yubikeys? Do they use SSH keys? Are they GPG signing commits? Who can approve merge requests or pull requests? Are team leads permitted to execute hot fixes or deviate from standard practices?
 
 **Cloud:** Do all engineers have access to the cloud? Do they have explicit permissions or admin permissions? Who is responsible for cloud migration tasks? Is Infrastructure as a Code (IaC) used to build cloud environments, or are they manually constructed? Who manages application administration - DevOps, CloudOps, or developers? Do teams use VPN or other secure means to access cloud resources? Can you SSH or RDP directly to servers in the cloud?%
+
+
+## Playbooks
+
+As part of our effort to make VBP something people will actually use, we want to encourage an ecosystem of open-source VBP Playbooks.  Each of these playbooks will focus on a certain specific threat modelling use case.  For example, our first playbook focuses on how to threat model a real public open-source project.  Moving forward we want to encourage VBP users to create their own playbooks and share them with the community.  
+
+You can see all of our Playbooks on the [Playbook Page](PLAYBOOKS.md)
+
+Here are some example playbooks:
+
+[Open Source Project Playbook](playbooks/OPEN-SOURCE-PROJECT-VBP-PLAYBOOK.md)
+
+[Cloud Native Application Playbook](playbooks/CLOUD-NATIVE-APPLICATION-VBP-PLAYBOOK.md)
 
 ### References
 
