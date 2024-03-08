@@ -1,14 +1,12 @@
 # VBP Framework
 
-## Flexible threat modelling & assessment methodology for software supply chains
-
-![VBP-logo.png](images/VBP-banner.png)
+![VBP-logo.png](playbooks/images/VBP-banner.png)
 
 The reality is that modern applications are complex and dynamic, making them challenging to secure. They utilize browser-based programming languages, directly interact with online dependencies, and implement technologies like containers, serverless, and public cloud. Understanding these components, such as the public cloud components used, the identity provider in use, and the required infrastructure, is crucial for securing the application.
 
 The supply chains supporting these applications are equally complex. They encompass developers and DevOps teams, CI/CD pipelines that build and deploy the apps, and the runtimes and cloud services that enable the apps to scale and operate.  I described the multiple stages of the software supply chain here: [https://gitlab.com/pmccarty/visualizing-software-supply-chain](https://gitlab.com/pmccarty/visualizing-software-supply-chain)
 
-![github-visualizing-software-supply-chain.png](images/github-visualizing-software-supply-chain.png)
+![github-visualizing-software-supply-chain.png](playbooks/images/github-visualizing-software-supply-chain.png)
 
 Organizations need a simple method to identify risks across their software supply chains to prioritize necessary work.  I developed the VBP framework as a practical threat modelling and assessment methodology for software supply chains.
 

@@ -1,37 +1,54 @@
 # VBP: Value, Behaviours & Patterns
 
-![VBP-banner.png](../images/VBP-banner.png)
+![VBP-banner.png](images/VBP-banner.png)
 
 ## Open-Source Project VBP Playbook
 
-This VBP Playbook is a step-by-step guide to threat modelling a public open-source project.  You can use this Playbook to conduct your own threat model on source code you've written yourself, or source code that you are integrated into an application.  Who owns the code isn't important, but understanding the risk related to that code is.
+This VBP Playbook is a step-by-step guide to threat modelling a public open-source project (OSP).  You can use this Playbook to conduct your own threat model on source code you've written yourself, or source code that you are integrated into an application.  Who owns the code isn't important, but understanding the risk related to that code is.
 
 ### Playbook Steps
 
-1. Use the ["Visualizing Software Supply Chains"](https://github.com/SecureStackCo/visualizing-software-supply-chain) to identify what software supply chain stages are involved.
+1. Typically, an open-source project that you consume as a git repository will only involve 4 or 5 stages of the SSC: People, Developer Tools, Source Code, Integration, and sometimes Deployment.  Use the ["Visualizing Software Supply Chains"](https://github.com/SecureStackCo/visualizing-software-supply-chain) to identify what software supply chain stages are involved in your target SSC.
 
-2. Typically, an open-source project that you consume as a git repository will only involve 4 stages of the SSC: People, Developer Tools, Source Code, and Integration.
+2. Git clone or fork the project to a local directory
 
-3. Git clone or fork the project to a local directory
-
-4. People stage:
+3. People stage:
 	- Identify all developers that have worked on the project by looking in the Contributors section, or by pulling commit authors from the code
 	- Query Git for email addresses 
+	- Cross reference contributors to see if any are working on important projects?
+	- Identify if developer persona is legitimate and hasn't been created recently
+	- Identify if developers SCM account is new
+	- Cross reference as many contributors as possible on LinkedIn to verify legitimacy
 
-5. Developer tool stage:
+4. Developer tool stage:
 	- Look in source code for evidence of IDE's, plugins and other tooling 
 	- Identify if local developer tools are up to date and secure
+	- Look in .gitignore files for evidence of other tools
+	- Identify if developers using containers locally on their laptops
 
-6. Source code stage:
+5. Source code stage:
 	- Scan source code for sensitive data like secrets and credentials
 	- Scan source code for our of date and vulnerable third-party libraries with SCA tool
 	- Scan source code for sensitive data like secrets and credentials
+	- Are private libraries or components being used?  NPM, RubyGems, PyPI, etc
 
 7. Integration stage:
+	- Identify what other applications or projects use this OSP
+		- Are any of the projects that use this OSP commercial in nature? 
+		- Do any critical infrastructure projects use the target OSP?
 	- Identify if project maintainer is signing their commits with GPG keys
 	- Identify if project maintainer is using MFA to sign into SCM provider
 	- Identify how many contributors are using GPG key signing for their commits
 	- Identify how many contributors are using SSH keys to connect to SCM provider
+	- Identify if the project is running any static analysis (SAST) tooling in a CI pipeline
+	- Identify if the project is running any software composition analysis (SCA) tooling in a CI pipeline
+	- Identify if the project is running any secret scanning tooling in a CI pipeline
 
+8. Deployment stage:
+	- Identify if there are build artifacts in CD pipeline
+		- Containers
+		- Zip files
+		- Binaries
+	- Identify if there are deployment variables in CD pipeline
 
 	
