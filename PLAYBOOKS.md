@@ -1,4 +1,4 @@
-# VBP: Value, Behaviours & Patterns
+# VBP Framework
 
 ![VBP-logo.png](playbooks/images/VBP-banner.png)
 

@@ -1,4 +1,4 @@
-# VBP: Value, Behaviours & Patterns
+# VBP Framework
 
 ![VBP-banner.png](images/VBP-banner.png)
 
@@ -19,20 +19,25 @@ This VBP Playbook is a step-by-step guide to threat modelling a public open-sour
 	- Identify if developer persona is legitimate and hasn't been created recently
 	- Identify if developers SCM account is new
 	- Cross reference as many contributors as possible on LinkedIn to verify legitimacy
+	- Identify whether contributor is a senior or lead engineer at company
 
 4. Developer tool stage:
 	- Look in source code for evidence of IDE's, plugins and other tooling 
 	- Identify if local developer tools are up to date and secure
 	- Look in .gitignore files for evidence of other tools
 	- Identify if developers using containers locally on their laptops
+	- Look for git hooks and other git files
 
 5. Source code stage:
 	- Scan source code for sensitive data like secrets and credentials
 	- Scan source code for our of date and vulnerable third-party libraries with SCA tool
-	- Scan source code for sensitive data like secrets and credentials
+	- Scan source code with static analysis tools (SAST) and look for flaws in code
+		- Are developers using out of date functions, classes or patterns?
+		- Are developers following best practices when it comes to sanitizing input, obfuscation, etc?
 	- Are private libraries or components being used?  NPM, RubyGems, PyPI, etc
 
 7. Integration stage:
+	- Identify if pull requests or merge requests are being used
 	- Identify what other applications or projects use this OSP
 		- Are any of the projects that use this OSP commercial in nature? 
 		- Do any critical infrastructure projects use the target OSP?
