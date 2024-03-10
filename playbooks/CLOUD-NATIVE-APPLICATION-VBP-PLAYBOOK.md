@@ -17,12 +17,6 @@ This VBP Playbook is a step-by-step guide to threat modelling a cloud-native web
 	- Identify any CDNs that the application is using
 	- Scan the application for exposed git repositories, .env or web.config files and similar
 
-3. Use a tool like Nuclei and its tech stack identification (tag = tech) to identify as many cloud resources as possible.   
-	- If a CDN is being used, try to identify the origin (ex: if AWS CDN is enabled, check to see if S3 or Ec2 is visible)
-
-3. Identify all subdomains in the top-level domain.
-	- If the web application has an environment name in its domain name (ex: dev.app.example.org) highlight any other subdomains that have that environment name (ex: dev.db.example.org)
-
 4. If the app has source code, and you have access to it, git clone or fork the project to a local directory
 
 5. People stage:
@@ -69,4 +63,14 @@ This VBP Playbook is a step-by-step guide to threat modelling a cloud-native web
 		- Binaries
 	- Identify if there are deployment variables in CD pipeline
 
-	
+3. DNS stage
+	- Identify all additional domains being used (ex: commbank.com.au, commbank.com, cba.com)
+	- Identify all subdomains in the top-level domain.
+		- If the web application has an environment name in its domain name (ex: dev.app.example.org) highlight any other subdomains that have that environment name (ex: dev.db.example.org)
+
+9. Cloud stage:
+	- Use a tool like Nuclei and its tech stack identification (tag = tech) to identify as many cloud resources as possible.   
+		- Identify the application pattern for the target:  Server based, serverless, CDN and static origin
+		- If a CDN is being used, try to identify the origin (ex: if AWS CDN is enabled, check to see if S3 or Ec2 is visible)
+	- If you have access to cloud access tokens or IAM user use Cloudfox to find all attack paths in the public cloud.
+
