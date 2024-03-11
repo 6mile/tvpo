@@ -12,6 +12,10 @@ Organizations need a simple method to identify risks across their software suppl
 
 VBP is highly flexible and can be applied to various targets: Applications, open-source projects, individual developers, DevOps teams, entire companies, and more. However, it really excels when applied to software supply chains.  Let's explore how the VBP framework operates.
 
+## Background
+
+As a full-time red teamer, I needed a way to systematically idenfity gaps in a software supply chain, so I could then target those gaps for my offensive security work. That's why I created the VBP framework.  Red teams, penetration testers, and bug bounty researchers can use this framework to prioritize their offensive operations. Similarly blue teams and DevOps teams can use this framework to help them proactively threat model their application environments to them prioritize their own mitigation and hardening tasks.
+
 Feel free to use these shortcuts:
 
 | [Value](#value) | [Behaviours](#behaviours) | [Patterns](#patterns) | [Playbooks](PLAYBOOKS.md) |
@@ -79,14 +83,19 @@ When identifying the patterns of a potential target group, consider the followin
 
 **Cloud:** Do all engineers have access to the cloud? Do they have explicit permissions or admin permissions? Who is responsible for cloud migration tasks? Is Infrastructure as a Code (IaC) used to build cloud environments, or are they manually constructed? Who manages application administration - DevOps, CloudOps, or developers? Do teams use VPN or other secure means to access cloud resources? Can you SSH or RDP directly to servers in the cloud?%
 
+## How to use VBP practically
+
+Here's how I personally use VBP:  First, I start with a target.  That target is usually either an application, a individual developer or most commonly, a company.  Once you know your target you can use the [Visualizing the Software Supply Chain](https://gitlab.com/pmccarty/visualizing-software-supply-chain) framework to identify what SSC stages are in the target, and what components are in each stage. It's important in this discovery period to identify as many components as possible so the use of tooling that can automate this for you is important.  You can find a list of tools that I've used successfully in the [Tools](TOOLS.md) section. 
+
+I've developed several Playbooks that focus on types of targets.  You can find these in [Playbooks](PLAYBOOKS.md). 
 
 ## Playbooks
 
-As part of our effort to make VBP something people will actually use, we want to encourage an ecosystem of open-source VBP Playbooks.  Each of these playbooks will focus on a certain specific threat modelling use case.  For example, our first playbook focuses on how to threat model a real public open-source project.  Moving forward we want to encourage VBP users to create their own playbooks and share them with the community.  
+As part of our effort to make VBP something people will actually use, we want to encourage an ecosystem of open-source VBP Playbooks.  Each of these Playbooks will focus on a certain specific threat modelling use case.  For example, our first Playbook focuses on how to threat model a real public open-source project.  Moving forward we want to encourage VBP users to create their own Playbooks and share them with the community.  
 
 You can see all of our Playbooks on the [Playbook Page](PLAYBOOKS.md)
 
-Here are some example playbooks:
+Here are some example Playbooks:
 
 [Open Source Project Playbook](playbooks/OPEN-SOURCE-PROJECT-VBP-PLAYBOOK.md)
 
@@ -94,8 +103,10 @@ Here are some example playbooks:
 
 ### References
 
-My presso for CrikeyCon:
+My original presentation at CrikeyCon 2021 where I first talked about VBP:
 
 [https://docs.google.com/presentation/d/1mXhj-GT_A9hVy_QKtWJPg-UCcvApZW5y_gBpoyOYpG4/edit#slide=id.gc39213de60_0_1530](https://docs.google.com/presentation/d/1mXhj-GT_A9hVy_QKtWJPg-UCcvApZW5y_gBpoyOYpG4/edit#slide=id.gc39213de60_0_1530)
 
-If the bad guys were to target software development teams, how would they do it? How do I decide to target? Who is a high value target? Well, i’ve created a mechanism I call VBP for “Value, Behaviour and Patterns”. This framework helps me provide risk assessments for engineering orgs.%
+The Open Software Supply Chain Attack Reference (OSC&R) is a comprehensive list of the attack vectors and chain of events that attackers will use when they try to exploit the software supply chain.  This MITRE ATT&CK-like matrix post-dates my original work on VBP but now that it exists you can think of it as a companion to VBP.
+
+[https://pbom.dev](https://pbom.dev)
