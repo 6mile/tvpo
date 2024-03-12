@@ -24,6 +24,8 @@ Feel free to use these shortcuts:
 
 TVBP is a process similar to a typical attack chain.  In 
 
+All supply chains are not the same.  An open source project has fewer moving pieces than a monolithic web application deployed and scaled in the cloud.  A company has many different application and application environments and therefore has many, many software supply chains.  Understanding the differences in these software supply chains is vitally important to successfully threat model them.
+
 
 ## Target
 
@@ -37,9 +39,9 @@ Any threat modelling or assessment excercise must first identify what is the tar
 
 Why would you choose specific targets?  Well, imagine if you were a nation state actor that wanted to increase its capability and maturity in artificial intelligence.  You might target a leading AI producer like Google.  In this case, when threat modelling the whole company is in scope because ultimately the end goal is to gain access to a piece of intellectual property.. 
 
-That same nation state actor might target a specific application, like Solarwinds, because of of who its customers are.  In which case you don't care about the company, but instead your target is a specific application.
+That same nation state actor might target a specific application, like Solarwinds, because of who its customers are.  In this case attackers don't care about the company really, but instead are focused on the application.  If the attackers compromised a different product at the company their objective still hasn't been met.  It's Solarwinds they needed to exploit because of its unique value to attackers.
 
-Each type of target is different and has its own unique supply chain.  An open-source repository has less moving pieces than a web application hosted in the cloud does.  An individual software engineer doesn't provide much value themselves, but they act as an avenue to other resources that are the real target.  Understanding this and how it affects h 
+Each type of target is different and has its own unique supply chain.  An open-source repository has less moving pieces than a web application hosted in the cloud does.  An individual software engineer doesn't provide much value themselves, but they act as an avenue to other resources that are the real target.  An open-source project is really just a git repository, so if its the primary target it will probably not have runtime or cloud components in its unique software supply chain.  However, almost every software supply chain will require software engineers to develop them, so understand how this affects your threat model and attack priorities.  Said a different way, software engineers are almost always in attack scope, so keep this in mind when using the TVBP methodology.
 
 Let's now talk about **why** you might choose a target...
 
