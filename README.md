@@ -29,7 +29,7 @@ TVBP is a process similar to a typical attack chain.  In
 
 ### Definition
 
-Who or what will be the focus of your offensive activities?
+Who or what is the focus of the offensive activities
 
 ### Description
 
@@ -47,7 +47,7 @@ Let's now talk about **why** you might choose a target...
 
 ### Definition: 
 
-Why has the target been selected?  What benefit would the target provide to an attacker?  
+The reason the target has been selected, or the benefit the target provides to an attacker
 
 ### Description:
 
