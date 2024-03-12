@@ -51,9 +51,9 @@ The reason the target has been selected, or the benefit the target provides to a
 
 ### Description:
 
-Identifying a target's potential value to an attacker is the initial step in risk assessment and prioritizing offensive operations. This target could be a company, an application, or a software project. Occasionally, a fourth type of target emerges: software engineers. Typically, this is because the engineer has access to the attacker's actual target, which could be their company, a project they contribute to, or an application they can access.
+Identifying a target's potential value to an attacker is the initial step in risk assessment, or prioritizing offensive operations if you are an attacker. This target could be a company, an application, or a software project. Occasionally, a fourth type of target emerges: software engineers. Typically, this is because the engineer has access to the attacker's actual target, which could be their company, a project they contribute to, or an application they can access.
 
-The intrinsic value of a target also determines what the goal is.  In our earlier example, the nation state actor had targeted Google to gain access to their AI technology.  So the targeting continues until that goal is met.
+The intrinsic value of a target also determines what the goal is.  In our earlier example, the nation state actor had targeted Google to gain access to their AI technology.  So the targeting continues until that goal is met.  Other times the objective is ongoing, which means the targeting is ongoing.
 
 Here are some questions to consider when assessing the value of potential targets:
 
@@ -73,13 +73,13 @@ Here are some questions to consider when assessing the value of potential target
 
 ### Definition:
 
-Traits of an individual human that make that person less secure
+Traits of an individual human that can be used for malicious purposes
 
 ### Description:
 
-In the context of TVBP, behaviours are the tangible artifacts of the anti-patterns an individual exibits in their working life. These behaviors impact their interaction with work processes and determine the tools and configurations they use. Behaviours can be likened to the unique fingerprints that a person leaves behind while performing their job, serving as identifiable patterns.
+In the context of TVBP, behaviours are the tangible artifacts of the anti-patterns an individual exibits in their working life. These behaviors impact their interaction with work processes and affect the tools and configurations they use. Behaviours can be likened to the unique fingerprints that a person leaves behind while performing their job, serving as identifiable patterns that can be leveraged by attackers.
 
-For example, a VTBP Behaviour can be that a software engineer never adds commit messages to their git commits.  Or that the engineer really likes an older version of Slack and so hasn't upgraded their Slack client because they don't want to use the newer version.
+For example, a Behaviour in this context can be that a software engineer doesn't use SSH keys to push code to their SCM provider.  Alternatively, the engineer might prefer an older version of their IDE, or a software library, and has therefore not upgraded to the latest version of that tool.  Each of these behaviours creates attack vectors that attackers can use.
 
 When identifying the behaviors of a potential target, consider asking the following questions:
 
@@ -95,7 +95,7 @@ When identifying the behaviors of a potential target, consider asking the follow
 
 ### Definition:
 
-Repeated traits within an organization that compromise its security.
+Repeated traits within an organization that compromise its security
 
 ### Description: 
 
