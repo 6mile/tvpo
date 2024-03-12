@@ -18,7 +18,7 @@ As a full-time red teamer, I needed a way to systematically idenfity gaps in a s
 
 Feel free to use these shortcuts:
 
-| [Value](#value) | [Behaviours](#behaviours) | [Patterns](#patterns) | [Playbooks](PLAYBOOKS.md) |
+| [Value](#value) | [Behaviours](#behaviours) | [Patterns](#patterns) | [Howto](#how-to-use-vbp-practically) | [Tools](TOOLS.md) | [Playbooks](PLAYBOOKS.md) |
 
 
 ## Value
