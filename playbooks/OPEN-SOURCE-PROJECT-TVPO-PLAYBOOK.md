@@ -1,10 +1,10 @@
-# VBP Framework
+# TVPO Framework
 
-![VBP-banner.png](images/VBP-banner.png)
+![tvpo-banner.png](images/tvpo-banner.png)
 
-## Open-Source Project VBP Playbook
+## Open-Source Project TVPO Playbook
 
-This VBP Playbook is a step-by-step guide to threat modelling a public open-source project (OSP).  You can use this Playbook to conduct your own threat model on source code you've written yourself, or source code that you are integrated into an application.  Who owns the code isn't important, but understanding the risk related to that code is.
+This TVPO Playbook is a step-by-step guide to threat modelling a public open-source project (OSP).  You can use this Playbook to conduct your own threat model on source code you've written yourself, or source code that you are integrated into an application.  Who owns the code isn't important, but understanding the risk related to that code is.
 
 ### Playbook Steps
 

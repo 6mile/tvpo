@@ -78,7 +78,7 @@ Here are some questions to consider when assessing the value of potential target
 
 ### Definition:
 
-Repated traits of an individual human, or an organization, that makes that target susceptible to attack.
+Repeated traits of an individual human, or an organization, that makes that target susceptible to attack.
 
 ### Description: 
 

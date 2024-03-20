@@ -1,10 +1,10 @@
-# VBP Framework
+# TVPO Framework
 
-![VBP-banner.png](images/VBP-banner.png)
+![tvpo-banner.png](images/tvpo-banner.png)
 
-## Cloud Native Application VBP Playbook
+## Cloud Native Application TVPO Playbook
 
-This VBP Playbook is a step-by-step guide to threat modelling a cloud-native web application deployed in the public cloud.  You can use this Playbook to conduct your own threat model on source code you've written yourself, or source code that you are integrated into an application.  Who owns the code isn't important, but understanding the risk related to that code is.
+This TVPO Playbook is a step-by-step guide to threat modelling a cloud-native web application deployed in the public cloud.  You can use this Playbook to conduct your own threat model on source code you've written yourself, or source code that you are integrated into an application.  Who owns the code isn't important, but understanding the risk related to that code is.
 
 ### Playbook Steps
 
