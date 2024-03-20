@@ -1,6 +1,6 @@
-# TVBP Framework
+# TVPO Framework
 
-![TVBP-logo.png](playbooks/images/TVBP-banner.png)
+![tvpo-banner.png](playbooks/images/tvpo-banner.png)
 
 The reality is that modern applications are complex and dynamic, making them challenging to secure. They utilize browser-based programming languages, directly interact with online dependencies, and implement technologies like containers, serverless, and public cloud. Understanding these components, such as the public cloud components used, the identity provider in use, and the required infrastructure, is crucial for securing the application.
 
@@ -8,21 +8,21 @@ The supply chains supporting these applications are equally complex. They encomp
 
 ![github-visualizing-software-supply-chain.png](playbooks/images/github-visualizing-software-supply-chain.png)
 
-Organizations need a simple method to identify risks across their software supply chains to prioritize necessary work.  I developed the TVBP framework as a practical threat modelling and assessment methodology for software supply chains.
+Organizations need a simple method to identify risks across their software supply chains to prioritize necessary work.  I developed the TVPO framework as a practical threat modelling and assessment methodology for software supply chains.
 
-TVBP is highly flexible and can be applied to various targets: Applications, open-source projects, individual developers, DevOps teams, entire companies, and more. However, it really excels when applied to software supply chains.  Let's explore how the TVBP framework operates.
+TVPO is highly flexible and can be applied to various targets: Applications, open-source projects, individual developers, DevOps teams, entire companies, and more. However, it really excels when applied to software supply chains.  Let's explore how the TVPO framework operates.
 
 ## Background
 
-As a full-time red teamer, I needed a way to systematically idenfity gaps in a software supply chain, so I could then target those gaps for my offensive security work. That's why I created the TVBP framework.  Red teams, penetration testers, and bug bounty researchers can use this framework to prioritize their offensive operations. Similarly blue teams and DevOps teams can use this framework to help them proactively threat model their application environments to them prioritize their own mitigation and hardening tasks.
+As a full-time red teamer, I needed a way to systematically idenfity gaps in a software supply chain, so I could then target those gaps for my offensive security work. That's why I created the TVPO framework.  Red teams, penetration testers, and bug bounty researchers can use this framework to prioritize their offensive operations. Similarly blue teams and DevOps teams can use this framework to help them proactively threat model their application environments to them prioritize their own mitigation and hardening tasks.
 
 Feel free to use these shortcuts:
 
-| [Introduction](#introduction) | [Value](#value) | [Behaviours](#behaviours) | [Patterns](#patterns) | [Howto](#how-to-use-vbp-practically) | [Tools](TOOLS.md) | [Playbooks](PLAYBOOKS.md) |
+| [Introduction](#introduction) | [Target](#target) | [Value](#value) | [Patterns](#patterns) | [Objectives](#objectives) | [Howto](#how-to-use-tvpo-practically) | [Tools](TOOLS.md) | [Playbooks](PLAYBOOKS.md) |
 
-## Introduction to TVBP
+## Introduction to TVPO
 
-TVBP is a process similar to a typical attack chain.  In 
+TVPO is a process similar to a typical attack chain.  In 
 
 All supply chains are not the same.  An open source project has fewer moving pieces than a monolithic web application deployed and scaled in the cloud.  A company has many different application and application environments and therefore has many, many software supply chains.  Understanding the differences in these software supply chains is vitally important to successfully threat model them.
 
@@ -41,7 +41,7 @@ Why would you choose specific targets?  Well, imagine if you were a nation state
 
 That same nation state actor might target a specific application, like Solarwinds, because of who its customers are.  In this case attackers don't care about the company really, but instead are focused on the application.  If the attackers compromised a different product at the company their objective still hasn't been met.  It's Solarwinds they needed to exploit because of its unique value to attackers.
 
-Each type of target is different and has its own unique supply chain.  An open-source repository has less moving pieces than a web application hosted in the cloud does.  An individual software engineer doesn't provide much value themselves, but they act as an avenue to other resources that are the real target.  An open-source project is really just a git repository, so if its the primary target it will probably not have runtime or cloud components in its unique software supply chain.  However, almost every software supply chain will require software engineers to develop them, so understand how this affects your threat model and attack priorities.  Said a different way, software engineers are almost always in attack scope, so keep this in mind when using the TVBP methodology.
+Each type of target is different and has its own unique supply chain.  An open-source repository has less moving pieces than a web application hosted in the cloud does.  An individual software engineer doesn't provide much value themselves, but they act as an avenue to other resources that are the real target.  An open-source project is really just a git repository, so if its the primary target it will probably not have runtime or cloud components in its unique software supply chain.  However, almost every software supply chain will require software engineers to develop them, so understand how this affects your threat model and attack priorities.  Said a different way, software engineers are almost always in attack scope, so keep this in mind when using the TVPO methodology.
 
 Let's now talk about **why** you might choose a target...
 
@@ -79,7 +79,7 @@ Traits of an individual human that can be used for malicious purposes
 
 ### Description:
 
-In the context of TVBP, behaviours are the tangible artifacts of the anti-patterns an individual exibits in their working life. These behaviors impact their interaction with work processes and affect the tools and configurations they use. Behaviours can be likened to the unique fingerprints that a person leaves behind while performing their job, serving as identifiable patterns that can be leveraged by attackers.
+In the context of TVPO, behaviours are the tangible artifacts of the anti-patterns an individual exibits in their working life. These behaviors impact their interaction with work processes and affect the tools and configurations they use. Behaviours can be likened to the unique fingerprints that a person leaves behind while performing their job, serving as identifiable patterns that can be leveraged by attackers.
 
 For example, a Behaviour in this context can be that a software engineer doesn't use SSH keys to push code to their SCM provider.  Alternatively, the engineer might prefer an older version of their IDE, or a software library, and has therefore not upgraded to the latest version of that tool.  Each of these behaviours creates attack vectors that attackers can use.
 
@@ -111,30 +111,30 @@ When identifying the patterns of a potential target group, consider the followin
 
 **Cloud:** Do all engineers have access to the cloud? Do they have explicit permissions or admin permissions? Who is responsible for cloud migration tasks? Is Infrastructure as a Code (IaC) used to build cloud environments, or are they manually constructed? Who manages application administration - DevOps, CloudOps, or developers? Do teams use VPN or other secure means to access cloud resources? Can you SSH or RDP directly to servers in the cloud?%
 
-## How to use TVBP practically
+## How to use TVPO practically
 
-Here's how I personally use TVBP:  First, I start with a target.  That target is usually either an application, a individual developer or most commonly, a company.  Once you know your target you can use the [Visualizing the Software Supply Chain](https://gitlab.com/pmccarty/visualizing-software-supply-chain) framework to identify what SSC stages are in the target, and what components are in each stage. It's important in this discovery period to identify as many components as possible so the use of tooling that can automate this for you is important.  You can find a list of tools that I've used successfully in the [Tools](TOOLS.md) section. 
+Here's how I personally use TVPO:  First, I start with a target.  That target is usually either an application, a individual developer or most commonly, a company.  Once you know your target you can use the [Visualizing the Software Supply Chain](https://gitlab.com/pmccarty/visualizing-software-supply-chain) framework to identify what SSC stages are in the target, and what components are in each stage. It's important in this discovery period to identify as many components as possible so the use of tooling that can automate this for you is important.  You can find a list of tools that I've used successfully in the [Tools](TOOLS.md) section. 
 
 I've developed several Playbooks that focus on types of targets.  You can find these in [Playbooks](PLAYBOOKS.md). 
 
 ## Playbooks
 
-As part of our effort to make TVBP something people will actually use, we want to encourage an ecosystem of open-source TVBP Playbooks.  Each of these Playbooks will focus on a certain specific threat modelling use case.  For example, our first Playbook focuses on how to threat model a real public open-source project.  Moving forward we want to encourage TVBP users to create their own Playbooks and share them with the community.  
+As part of our effort to make TVPO something people will actually use, we want to encourage an ecosystem of open-source TVPO Playbooks.  Each of these Playbooks will focus on a certain specific threat modelling use case.  For example, our first Playbook focuses on how to threat model a real public open-source project.  Moving forward we want to encourage TVPO users to create their own Playbooks and share them with the community.  
 
 You can see all of our Playbooks on the [Playbook Page](PLAYBOOKS.md)
 
 Here are some example Playbooks:
 
-[Open Source Project Playbook](playbooks/OPEN-SOURCE-PROJECT-TVBP-PLAYBOOK.md)
+[Open Source Project Playbook](playbooks/OPEN-SOURCE-PROJECT-TVPO-PLAYBOOK.md)
 
-[Cloud Native Application Playbook](playbooks/CLOUD-NATIVE-APPLICATION-TVBP-PLAYBOOK.md)
+[Cloud Native Application Playbook](playbooks/CLOUD-NATIVE-APPLICATION-TVPO-PLAYBOOK.md)
 
 ### References
 
-My original presentation at CrikeyCon 2021 where I first talked about TVBP:
+My original presentation at CrikeyCon 2021 where I first talked about TVPO:
 
 [https://docs.google.com/presentation/d/1mXhj-GT_A9hVy_QKtWJPg-UCcvApZW5y_gBpoyOYpG4/edit#slide=id.gc39213de60_0_1530](https://docs.google.com/presentation/d/1mXhj-GT_A9hVy_QKtWJPg-UCcvApZW5y_gBpoyOYpG4/edit#slide=id.gc39213de60_0_1530)
 
-The Open Software Supply Chain Attack Reference (OSC&R) is a comprehensive list of the attack vectors and chain of events that attackers will use when they try to exploit the software supply chain.  This MITRE ATT&CK-like matrix post-dates my original work on TVBP but now that it exists you can think of it as a companion to TVBP.
+The Open Software Supply Chain Attack Reference (OSC&R) is a comprehensive list of the attack vectors and chain of events that attackers will use when they try to exploit the software supply chain.  This MITRE ATT&CK-like matrix post-dates my original work on TVPO but now that it exists you can think of it as a companion to TVPO.
 
 [https://pbom.dev](https://pbom.dev)
