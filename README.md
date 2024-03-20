@@ -22,7 +22,8 @@ Feel free to use these shortcuts:
 
 ## Introduction to TVPO
 
-TVPO is a process similar to a typical attack chain.  In 
+TVPO is a process similar to a typical attack chain but for threat modelling.  It's really simple and works like this:  
+First, you choose a target.  Then you identify what value that target provides to the attacker.  Next, you identify anti-patterns in the target that you can use for offensive operations.  Finally, you define the objectives for the offensive operation including timeline, goals and how the operational infrastructure is managed.
 
 ![tvpo-thin-banner.png](playbooks/images/tvpo-thin-banner.png)
 
@@ -83,9 +84,9 @@ Repated traits of an individual human, or an organization, that makes that targe
 
 There are two types of Patterns:  Individual behaviours and organization patterns.
 
-Behaviours are the ongoing choices that an individual makes in their working life. These behaviours affect how they interact with work processes, and influences the tools and configurations they use. Behaviours can be thought of as the fingerprints that a person leaves as they do their job. Behaviours are the patterns of the individual that allow you to fingerprint them.
+**Behaviours** are the ongoing choices that an individual makes in their working life. These behaviours affect how they interact with work processes, and influences the tools and configurations they use. Behaviours can be thought of as the fingerprints that a person leaves as they do their job. Behaviours are the patterns of the individual that allow you to fingerprint them.
 
-Organizational Patterns are common traits observable across various application environments. Initially, they emerge as individual behaviours which, over time, solidify into recurring patterns exhibited by teams, departments, and even entire companies. These patterns deviate from industry best practices, and can be considered as "anti-patterns". The name isn't crucial. What matters is our ability to recognize these patterns and leverage them during threat modelling and offensive operations.
+**Organizational Patterns** are common traits observable across various application environments. Initially, they emerge as individual behaviours which, over time, solidify into recurring patterns exhibited by teams, departments, and even entire companies. These patterns deviate from industry best practices, and can be considered as "anti-patterns". The name isn't crucial. What matters is our ability to recognize these patterns and leverage them during threat modelling and offensive operations.
 
 When identifying the patterns of a potential target group, consider the following questions:
 
@@ -102,6 +103,22 @@ When identifying the patterns of a potential target group, consider the followin
 **Source Code Management (SCM):** Does the organization use GitHub for all repositories, or GitHub for public and GitLab for private ones? Are teams using Yubikeys? Do they use SSH keys? Are they GPG signing commits? Who can approve merge requests or pull requests? Are team leads permitted to execute hot fixes or deviate from standard practices?
 
 **Cloud:** Do all engineers have access to the cloud? Do they have explicit permissions or admin permissions? Who is responsible for cloud migration tasks? Is Infrastructure as a Code (IaC) used to build cloud environments, or are they manually constructed? Who manages application administration - DevOps, CloudOps, or developers? Do teams use VPN or other secure means to access cloud resources? Can you SSH or RDP directly to servers in the cloud?%
+
+## Objectives
+
+### Definition:
+
+The timeline, goals, and outcomes that the attacker aims to achieve through the offensive operation.
+
+### Description: 
+
+Ultimately, an attacker has a set of outcomes they want to achieve as part of the offensive operations.  These outcomes have several components:
+
+**Goals:** What specific metric of success does the attacker have?  Are they looking for a specific file or data? Access to ongoing classified data?  Money? Are the attackers financially, politically, or strategically motivated?  Are attackers nation state related?  If so, their goal will be much more nuanced and less obvious.  Keep in mind that often there are multiple goals that need to be achieved in sequence to deliver a successful offensive operation.  Try to think about context:  Is this a primary objective, or a secondary objective that eventually gets you to your primary objective?
+
+**Timelines:** How long until the objectives are met?  If the focus of the operation is to gain a thing like specific files or data, then once that goal has been reached, the operation is over.  This is an example of a "finite" timeline.  If the goal is to understand how a target is evolving, then the timeline would be "ongoing".  An example of this is if a nation state actor was watching how a specific AI product was evolving, the operation would happen over a longer timeline.
+
+**Operational Infrastructure:** What tools, servers, services and dependencies do the attackers need to have to be able to successfully deliver their objectives?  Depending on the what the goals, and timelines are, different infrastructure requirements we be needed. If attackers are nation state related their infrastructure will often be much more layered and nuanced.  Therefore they will go out of their way to evade detection at all costs.  If the goal is financially motivated, then attackers will often not care if they are detected.  
 
 ## How to use TVPO practically
 
