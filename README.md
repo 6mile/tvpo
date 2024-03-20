@@ -24,6 +24,8 @@ Feel free to use these shortcuts:
 
 TVPO is a process similar to a typical attack chain.  In 
 
+![tvpo-thin-banner.png](playbooks/images/tvpo-thin-banner.png)
+
 All supply chains are not the same.  An open source project has fewer moving pieces than a monolithic web application deployed and scaled in the cloud.  A company has many different application and application environments and therefore has many, many software supply chains.  Understanding the differences in these software supply chains is vitally important to successfully threat model them.
 
 
