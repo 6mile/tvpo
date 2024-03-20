@@ -1,10 +1,10 @@
-# VBP Framework
+# TVPO Framework
 
-![VBP-logo.png](playbooks/images/VBP-banner.png)
+![tvpo-banner.png](playbooks/images/tvpo-banner.png)
 
-## Tools to help you automate the VBP process
+## Tools to help you automate the TVPO process
 
-Discovery of the many different moving pieces in a software supply chain (SSC) is often laborious, so the use of tools to automate and speed up the process is important.  Below are a few tools that I've used recently to help me leverage the VBP framework.
+Discovery of the many different moving pieces in a software supply chain (SSC) is often laborious, so the use of tools to automate and speed up the process is important.  Below are a few tools that I've used recently to help me leverage the TVPO framework.
 
 ### One tool to rule them all:
 
@@ -28,7 +28,7 @@ Gitleaks is similar to Trufflehog but is built more for a single use case which 
 
 ### Nuclei 
 
-Nuclei is a great vulnerability scanner for web applications.  It uses Wappalyzer and custom rules to do tech stack detection as well.  This is one of the first tools I use when I am using the VBP framework as it gives me a good understanding of what components the application is using.  You can find it at https://github.com/projectdiscovery/nuclei
+Nuclei is a great vulnerability scanner for web applications.  It uses Wappalyzer and custom rules to do tech stack detection as well.  This is one of the first tools I use when I am using the TVPO framework as it gives me a good understanding of what components the application is using.  You can find it at https://github.com/projectdiscovery/nuclei
 
 ### Wappalyzer
 
