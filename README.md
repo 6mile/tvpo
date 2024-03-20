@@ -85,6 +85,23 @@ For example, a Behaviour in this context can be that a software engineer doesn't
 
 When identifying the behaviors of a potential target, consider asking the following questions:
 
+
+## Patterns
+
+### Definition:
+
+Repated traits of an individual human, or an organization, that makes that target susceptible to attack.
+
+### Description: 
+
+There are two types of Patterns:  Individual behaviours and organization patterns.
+
+Behaviours are the ongoing choices that an individual makes in their working life. These behaviours affect how they interact with work processes, and influences the tools and configurations they use. Behaviours can be thought of as the fingerprints that a person leaves as they do their job. Behaviours are the patterns of the individual that allow you to fingerprint them.
+
+Organizational Patterns are common traits observable across various application environments. Initially, they emerge as individual behaviours which, over time, solidify into recurring patterns exhibited by teams, departments, and even entire companies. These patterns deviate from industry best practices, and can be considered as "anti-patterns". The name isn't crucial. What matters is our ability to recognize these patterns and leverage them during threat modelling and offensive operations.
+
+When identifying the patterns of a potential target group, consider the following questions:
+
 **Tools:** What tools do they use and how do they set them up? Do they tend to use a specific IDE? Specific plugins? Do they follow security best practices when interacting with work resources? What SaaS platforms do they like to use or integrate into their work? Do they use SSH keys, PAT tokens, JWT, etc?
 
 **Configurations:** What unique configurations does a person use in their work? Do they like to work in feature branches and merge into dev? Or do they merge directly into main?
@@ -92,18 +109,6 @@ When identifying the behaviors of a potential target, consider asking the follow
 **Variables:** How does the person like to name things? Where do they like to store secrets? Do they use .env files or secret managers?
 
 **Associations:** Does the developer like to work with a specific group of people?  Do they always work with the same frontend developer?  Do they always like to use React or Ubuntu 16.04 containers, because they know them well?
-
-## Patterns
-
-### Definition:
-
-Repeated traits within an organization that compromise its security
-
-### Description: 
-
-Patterns are common traits observable across various application environments. Initially, they emerge as individual behaviours which, over time, solidify into recurring patterns exhibited by teams, departments, and even entire companies. These patterns deviate from industry best practices, and can be considered as "anti-patterns". The name isn't crucial. What matters is our ability to recognize these patterns and leverage them during threat modelling and offensive operations.
-
-When identifying the patterns of a potential target group, consider the following questions:
 
 **Environments:** Does the organization name its environments as dev, staging, and prod, or do they use names like Hermes, Zeus, and Athena? Do these environments employ flat networks, or highly separated ones? Who has access to which environments, and who can modify them? Are certain roles granted access to all environments? Are security tools implemented in production, but not lower environments like development and testing? Are production environments always set up independently, or can development environments evolve into production? Are all environments public, or are lower ones like development and staging private?
 
