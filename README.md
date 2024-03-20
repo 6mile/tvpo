@@ -71,21 +71,6 @@ Here are some questions to consider when assessing the value of potential target
 
 **Data:** What kind of data does the target possess? Is it protected and sensitive? What would be the consequences if this data was misused?
 
-## Behaviours
-
-### Definition:
-
-Traits of an individual human that can be used for malicious purposes
-
-### Description:
-
-In the context of TVPO, behaviours are the tangible artifacts of the anti-patterns an individual exibits in their working life. These behaviors impact their interaction with work processes and affect the tools and configurations they use. Behaviours can be likened to the unique fingerprints that a person leaves behind while performing their job, serving as identifiable patterns that can be leveraged by attackers.
-
-For example, a Behaviour in this context can be that a software engineer doesn't use SSH keys to push code to their SCM provider.  Alternatively, the engineer might prefer an older version of their IDE, or a software library, and has therefore not upgraded to the latest version of that tool.  Each of these behaviours creates attack vectors that attackers can use.
-
-When identifying the behaviors of a potential target, consider asking the following questions:
-
-
 ## Patterns
 
 ### Definition:
