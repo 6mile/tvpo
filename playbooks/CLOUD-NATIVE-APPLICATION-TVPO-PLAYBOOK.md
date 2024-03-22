@@ -10,9 +10,7 @@ This TVPO Playbook is a step-by-step guide to threat modelling a cloud-native we
 
 1. A web application typically has many moving pieces, and a cloud-enabled or cloud-deployed web app has even more. For the purpose of this playbook you can think of this app as having one public URL, a single source code repository, and a set of cloud resources.  As such, this applications will typically use most of the SSC stages.  Use the ["Visualizing Software Supply Chains"](https://github.com/SecureStackCo/visualizing-software-supply-chain) to identify what software supply chain stages are involved in your target SSC.
 
-2. If the app has source code, and you have access to it, git clone or fork the project to a local directory
-
-3. People stage:
+2. People stage:
 	- Identify all developers that have worked on the project by looking in the Contributors section, or by pulling commit authors from the code
 	- Query Git for email addresses 
 	- Cross reference contributors to see if any are working on important projects?
@@ -21,14 +19,15 @@ This TVPO Playbook is a step-by-step guide to threat modelling a cloud-native we
 	- Cross reference as many contributors as possible on LinkedIn to verify legitimacy
 	- Identify whether contributor is a senior or lead engineer at company
 
-4. Developer tool stage:
+3. Developer tool stage:
 	- Look in source code for evidence of IDE's, plugins and other tooling 
 	- Identify if local developer tools are up to date and secure
 	- Look in .gitignore files for evidence of other tools
 	- Identify if developers using containers locally on their laptops
 	- Look for git hooks and other git files
 
-5. Source code stage:
+4. Source code stage:
+	- If the app has source code, and you have access to it, git clone or fork the project to a local directory
 	- Scan source code for sensitive data like secrets and credentials
 	- Scan source code for our of date and vulnerable third-party libraries with SCA tool
 	- Scan source code with static analysis tools (SAST) and look for flaws in code
@@ -37,7 +36,7 @@ This TVPO Playbook is a step-by-step guide to threat modelling a cloud-native we
 	- Are private libraries or components being used?  NPM, RubyGems, PyPI, etc
 	- Use a link finder tool to identify all javascript endpoints in the web app
 
-6. Integration stage:
+5. Integration stage:
 	- Identify if pull requests or merge requests are being used
 	- Identify what other applications or projects use this OSP
 		- Are any of the projects that use this OSP commercial in nature? 
@@ -50,14 +49,14 @@ This TVPO Playbook is a step-by-step guide to threat modelling a cloud-native we
 	- Identify if the project is running any software composition analysis (SCA) tooling in a CI pipeline
 	- Identify if the project is running any secret scanning tooling in a CI pipeline
 
-7. Deployment stage:
+6. Deployment stage:
 	- Identify if there are build artifacts in CD pipeline
 		- Containers
 		- Zip files
 		- Binaries
 	- Identify if there are deployment variables in CD pipeline
 
-8. Runtime stage:
+7. Runtime stage:
 	- If the web application has a URL, use a tool like Nuclei, Burp or ZAP to analyze the application and find as many of its components as possible.
 	- Identify all software components running in the web application.  This includes the language that the front-end uses, Javascript libraries, and any web frameworks being used.
 	- Identify all APIs that the application calls
@@ -65,7 +64,7 @@ This TVPO Playbook is a step-by-step guide to threat modelling a cloud-native we
 	- Identify any CDNs that the application is using
 	- Scan the application for exposed git repositories, .env or web.config files and similar
 
-9. DNS stage
+8. DNS stage
 	- Identify all additional domains being used (ex: commbank.com.au, commbank.com, cba.com)
 	- Identify all subdomains in the top-level domain.
 		- If the web application has an environment name in its domain name (ex: dev.app.example.org) highlight any other subdomains that have that environment name (ex: dev.db.example.org)
