@@ -34,5 +34,21 @@ Nuclei is a great vulnerability scanner for web applications.  It uses Wappalyze
 
 Wappalyzer is several things at once.  You can run it as a browser extension and in that use case as you browse websites the Wappalyzer extension will tell you in real-time what components that website is using.  You can also run it as a command line tool or use it as a library via the NPM package.  Unfortunately, Wappalyzer was recently made closed source so you can check out this current fork of the project at https://github.com/enthec/webappanalyzer
 
+### Commit-Audit
 
+Commit-Audit is a tool that I built to audit git commits and the people making those commits.  It works on local or remote repositories, it shows statistics for the whole repo and for each developer, and it will save the output in CSV format.
+You can find commit-audit at https://github.com/6mile/commit-audit
+
+### Zed Attack Proxy (ZAP)
+
+The world’s most widely used web app scanner. Free and open source. Actively maintained by a dedicated international team of volunteers. A GitHub Top 1000 project.  Used to be an OWASP project but famously left in 2023 to move to the OpenSSF.
+You can find its website at: https://www.zaproxy.org/
+
+### Gau
+
+Gau (get all urls) will fetch all known URLs in a target from multiple sources on the internet (AlienVault, Wayback Machine, Common Crawl, and URLscan).  You can get gau here: https://github.com/lc/gau
+
+### LinkFinder
+
+LinkFinder is a Python script designed to uncover endpoints and their parameters in JavaScript files. This tool aids security researchers in identifying new, concealed endpoints on the websites they're testing.  You can find it at https://github.com/GerbenJavado/LinkFinder
 
