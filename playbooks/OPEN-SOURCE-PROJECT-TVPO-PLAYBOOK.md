@@ -20,6 +20,8 @@ Follow the [Playbook Steps](#playbook-steps) section to identify patterns that c
 
 ### Objectives
 
+(Reminder: These are just examples.  Replace with your own.)
+
 1. Gain administrative access to the repo
 2. Compromise the maintainer of the project
 3. Deploy backdoor into the target repository
@@ -33,9 +35,13 @@ Follow the [Playbook Steps](#playbook-steps) section to identify patterns that c
 
 3. People stage:
 	- Identify all developers that have worked on the project by looking in the Contributors section, or by pulling commit authors from the code
-	- Query Git for email addresses ``` git log --pretty=format:%ae | sort -u ```
+	- Query Git for email addresses 
+		- ``` git log --pretty=format:%ae | sort -u ```
+		- Google the email address to see if it has been used somewhere else
+		- Run email addresses through [Have I Been Pwned](https://haveibeenpwned.com/)
 	- Cross reference contributors to see if any are working on important projects?
 	- Identify if developer persona is legitimate and hasn't been created recently
+		- Cross reference persona with LinkedIn and Facebook.
 	- Identify if developers SCM account is new
 	- Cross reference as many contributors as possible on LinkedIn to verify legitimacy
 	- Identify whether contributor is a senior or lead engineer at company
