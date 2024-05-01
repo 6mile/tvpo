@@ -16,7 +16,7 @@ This open-source project is used for a popular CDN that hosts Javascript librari
 
 ### Patterns
 
-Follow the Playbook Steps section to identify patterns that can be used by attackers.
+Follow the [Playbook Steps](#playbook-steps) section to identify patterns that can be used by attackers.
 
 ### Objectives
 
