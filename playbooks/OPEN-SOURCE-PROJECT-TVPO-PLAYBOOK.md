@@ -82,4 +82,4 @@ Follow the [Playbook Steps](#playbook-steps) section to identify patterns that c
 
 Collaborator --> Malicious PR --> Malware injection --> Customers Compromised
 
-Fork Project --> Fix Bugs in Original Project --> Build Community Trust --> New Version --> Malware Injected --> Customers Compromised
+Identify Existing Bugs in Old Package --> Fork Project --> Fix Bugs in Original Project --> Build Community Trust --> New Version --> Malware Injected --> Customers Compromised
